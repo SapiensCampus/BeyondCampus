@@ -1,4 +1,4 @@
-/* Sapiens Campus yellove: paper, cream, yellow, plus the site's green, pink, lilac and sky. */
+/* Yellove poster: paper, cream, yellow, plus green, pink, lilac and sky. */
 
 :root {
   color-scheme: light;
@@ -100,10 +100,10 @@ ul {
 
 .ticker {
   background: var(--ink);
-  color: var(--yellow);
+  color: var(--paper);
   overflow: hidden;
   border-bottom: 3px solid var(--ink);
-  padding: 11px 0;
+  padding: 6px 0;
 }
 
 .ticker-track {
@@ -113,12 +113,12 @@ ul {
 }
 
 .ticker-track span {
-  font-family: var(--display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  font-size: 1rem;
+  font-family: var(--body);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
   white-space: nowrap;
-  padding-right: 0.2rem;
 }
 
 @keyframes ticker {
@@ -682,10 +682,10 @@ textarea::placeholder {
   background: var(--ink);
   color: var(--yellow);
   text-align: center;
-  font-family: var(--display);
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: var(--body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 @media (hover: hover) {

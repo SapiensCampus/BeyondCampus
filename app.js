@@ -1,4 +1,4 @@
-// TODO: replace these dummy WhatsApp invites with the real Sapiens Campus interest-channel links.
+// TODO: replace these dummy WhatsApp invites with the real interest-channel links.
 const INVITE_LINKS = {
   tech: "https://chat.whatsapp.com/beyondcampus-tech",
   design: "https://chat.whatsapp.com/beyondcampus-design",
@@ -8,7 +8,7 @@ const INVITE_LINKS = {
 };
 
 const STORAGE_KEY = "beyondcampus.discover.v1";
-const FOOTER = "Sapiens Campus ✦ Explore ✦ Evelve ✦ Engineer";
+const FOOTER = "BeyondCampus ✦ Discover ✦ Connect ✦ Grow";
 const SCREENS = ["landing", "question", "result", "quests", "confirm", "connect"];
 
 const SECONDARY = {
@@ -70,93 +70,93 @@ function option(cat, label) {
 
 const QUESTIONS = [
   {
-    prompt: "Labs are done. You have one free hour. You actually…",
+    prompt: "Free hour. What do you actually do?",
     options: [
-      option("tech", "Open a half-finished project and tinker"),
-      option("design", "Redo a poster or a messy slide"),
-      option("entrepreneurship", "Text someone about an idea that could be real"),
-      option("content", "Film a 30-second recap of your week"),
-      option("community", "Decide who should meet at the next hangout"),
+      option("tech", "Tinker with a small app or website"),
+      option("design", "Fix how something looks"),
+      option("entrepreneurship", "Jot an idea that could make money"),
+      option("content", "Film or write something short"),
+      option("community", "Text people and plan a hangout"),
     ],
   },
   {
-    prompt: "The college fest is short one person. You take…",
+    prompt: "Your class needs one helper. You take…",
     options: [
-      option("tech", "The site, the QR, the registration flow"),
-      option("design", "Backdrop, merch, the whole look"),
-      option("entrepreneurship", "Sponsor pitches and the money"),
-      option("content", "Reels, captions, the hype"),
-      option("community", "Crew, timing, getting people there"),
+      option("tech", "The form, the site, or the bot"),
+      option("design", "The poster and the slides"),
+      option("entrepreneurship", "Sponsors, tickets, or the pitch"),
+      option("content", "The posts and the hype"),
+      option("community", "Getting people to show up"),
     ],
   },
   {
-    prompt: "A junior is stuck the night before a review. You…",
+    prompt: "A friend is stuck. You help by…",
     options: [
-      option("tech", "Sit with the bug until it makes sense"),
-      option("design", "Fix the slides so the work is easy to see"),
-      option("entrepreneurship", "Help them say the idea in one sentence"),
-      option("content", "Turn it into a story other juniors get"),
-      option("community", "Introduce them to the right senior"),
+      option("tech", "Fixing the bug or the setup"),
+      option("design", "Cleaning up the layout"),
+      option("entrepreneurship", "Saying who it is for, in one line"),
+      option("content", "Writing the caption or the script"),
+      option("community", "Introducing the right person"),
     ],
   },
   {
-    prompt: "Which compliment quietly fits?",
+    prompt: "Which win feels best?",
     options: [
-      option("tech", "“Wait, you built that?”"),
-      option("design", "“This finally looks like you.”"),
-      option("entrepreneurship", "“You would actually start this.”"),
-      option("content", "“I watched the whole thing.”"),
-      option("community", "“It worked because you held it together.”"),
+      option("tech", "It works when you click it"),
+      option("design", "It finally looks right"),
+      option("entrepreneurship", "Someone would actually pay"),
+      option("content", "People watched or shared it"),
+      option("community", "The right people showed up"),
     ],
   },
   {
-    prompt: "A blank Sunday. The project that tempts you is…",
+    prompt: "Pick a 20-minute task.",
     options: [
-      option("tech", "A tiny tool that saves your class ten minutes"),
-      option("design", "A redesign of something ugly you use daily"),
-      option("entrepreneurship", "A one-page plan for a campus micro-business"),
-      option("content", "A short video that explains one idea simply"),
-      option("community", "A meetup for people who never speak in class"),
+      option("tech", "A one-page site about you"),
+      option("design", "A new look for your ID card"),
+      option("entrepreneurship", "A price and a one-line offer"),
+      option("content", "Three hooks for a short video"),
+      option("community", "A guest list for a tiny meetup"),
     ],
   },
   {
-    prompt: "In a group, you become the one who…",
+    prompt: "In a group, you quietly become the one who…",
     options: [
-      option("tech", "Sets up the repo and ships the demo"),
-      option("design", "Makes the deck feel human"),
-      option("entrepreneurship", "Decides what you're building and why anyone cares"),
-      option("content", "Writes the script and records the walkthrough"),
-      option("community", "Keeps the group alive and the deadline honest"),
+      option("tech", "Makes the demo run"),
+      option("design", "Makes the deck look good"),
+      option("entrepreneurship", "Says why anyone should care"),
+      option("content", "Writes it and hits record"),
+      option("community", "Keeps everyone on track"),
     ],
   },
   {
-    prompt: "You open your phone meaning to study. You stay for…",
+    prompt: "You open your phone and stay for…",
     options: [
-      option("tech", "A build log or a clever student repo"),
-      option("design", "A before-and-after or a type experiment"),
-      option("entrepreneurship", "A founder story from a college like yours"),
-      option("content", "A sharp essay or a well-cut short"),
-      option("community", "A recap of a meetup you wish you'd attended"),
+      option("tech", "A build, a repo, a how-it-works"),
+      option("design", "A before-and-after"),
+      option("entrepreneurship", "Someone who started a small thing"),
+      option("content", "A short video or a sharp post"),
+      option("community", "Photos from a hangout"),
     ],
   },
   {
-    prompt: "Someone hands you two minutes on a Sapiens Campus mic.",
+    prompt: "Two minutes to show something. You show…",
     options: [
-      option("tech", "Live-code something small"),
-      option("design", "Walk through a visual you made"),
-      option("entrepreneurship", "Pitch a problem your college still ignores"),
-      option("content", "Tell one campus scene in your own voice"),
-      option("community", "Host, and pull three quiet people in"),
+      option("tech", "A tiny thing you built"),
+      option("design", "A visual you made"),
+      option("entrepreneurship", "A problem people would pay to fix"),
+      option("content", "A short story from campus"),
+      option("community", "How you’d get people in a room"),
     ],
   },
   {
-    prompt: "The line that sounds most like you:",
+    prompt: "A good week looks like…",
     options: [
-      option("tech", "I want to make it work."),
-      option("design", "I want it to feel right."),
-      option("entrepreneurship", "I want someone to actually use it."),
-      option("content", "I want people to get it."),
-      option("community", "I want us in the same room."),
+      option("tech", "I shipped something small"),
+      option("design", "I made something look better"),
+      option("entrepreneurship", "I tried an idea on a real person"),
+      option("content", "I posted something people finished"),
+      option("community", "I got people in the same place"),
     ],
   },
 ];
@@ -451,7 +451,7 @@ function tagsFor(id) {
 }
 
 function ticker() {
-  const line = "Curious looks good on you  ✦  A place to become  ✦  Explore  ✦  Evelve  ✦  Engineer  ✦  No grades. Just you  ✦  Find your people  ✦  ";
+  const line = "Discover   ·   Connect   ·   Grow   ·   ";
   return `
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
@@ -471,7 +471,6 @@ function shell(body) {
       <header class="top">
         <button type="button" class="brandbtn" data-action="home">
           <span class="brand">BeyondCampus</span>
-          <span class="by">Sapiens Campus</span>
         </button>
         ${restart}
       </header>
@@ -486,20 +485,19 @@ function renderLanding() {
     ? `<button type="button" class="btn primary" data-action="resume">Continue where you left off</button>`
     : "";
   return shell(`
-    <p class="eyebrow"><span class="faces" aria-hidden="true"><i>:)</i><i>:D</i><i>;)</i></span> a different kind of campus</p>
-    <h1>Your campus. <span class="mark tilt">Without the limits.</span></h1>
-    <p class="lede">Find what makes you, you. Meet your people across colleges. Build the things you wish existed.</p>
+    <p class="eyebrow"><span class="faces" aria-hidden="true"><i>:)</i><i>:D</i><i>;)</i></span> a platform in three steps</p>
+    <h1>Start with <span class="mark tilt">what you love.</span></h1>
+    <p class="lede">Find what makes you, you. Meet your people across colleges. Grow with expert guidance.</p>
     <div class="stickers">
       <span class="sticker s-green tilt-l">About 2 minutes</span>
       <span class="sticker s-pink tilt-r">a little more you</span>
       <span class="sticker s-blue">no email needed</span>
     </div>
     <aside class="poster">
-      <span class="corner-sticker">you, somewhere new</span>
-      <p class="poster-kicker">12.0° curious / 100% you</p>
+      <span class="corner-sticker">your pace</span>
+      <p class="poster-kicker">Discover · Connect · Grow</p>
       <p class="poster-title">A place to become</p>
-      <p>By the students, for the students. One curious campus for engineering colleges across Tamil Nadu.</p>
-      <p class="poster-stats"><span>3000+ students</span><span>50+ colleges</span><span>20+ meetups</span></p>
+      <p>BeyondCampus is a simple platform. Discover what you enjoy, connect with people on that path, and grow with expert guidance when you want to go further.</p>
     </aside>
     <ol class="phases">
       <li class="phase phase-discover is-now">
@@ -508,7 +506,7 @@ function renderLanding() {
           <span class="badge">active</span>
         </div>
         <h2>Discover</h2>
-        <p>Find your kind of curious.</p>
+        <p>Name what you enjoy. No grades.</p>
       </li>
       <li class="phase phase-connect">
         <div class="phase-top">
@@ -516,7 +514,7 @@ function renderLanding() {
           <span class="badge">next</span>
         </div>
         <h2>Connect</h2>
-        <p>Good people. New perspectives.</p>
+        <p>Meet people on the same path.</p>
       </li>
       <li class="phase phase-grow">
         <div class="phase-top">
@@ -524,10 +522,10 @@ function renderLanding() {
           <span class="badge">next</span>
         </div>
         <h2>Grow</h2>
-        <p>Small starts. Real things. Learn with experts.</p>
+        <p>Expert guidance, when you are ready.</p>
       </li>
     </ol>
-    <p class="note">Free to explore. Curious looks good on you.</p>
+    <p class="note">About 2 minutes. No email needed.</p>
     <div class="actions">
       ${resume}
       <button type="button" class="btn ${resume ? "" : "primary"}" data-action="start">Start discovering</button>
@@ -559,11 +557,11 @@ function renderQuestion() {
     </div>
     <div class="qstack">
       <article class="qcard">
-        <p class="kicker">A gut feeling. A single tap.</p>
+        <p class="kicker">Quick pick. First feeling wins.</p>
         <h1>${esc(question.prompt)}</h1>
       </article>
     </div>
-    <p class="hint">Pick what feels like you. Not what sounds impressive.</p>
+    <p class="hint">Don’t overthink it. Pick the one that sounds fun.</p>
     <div class="stack">${options}</div>
     <div class="actions">${back}</div>
   `);
@@ -593,7 +591,7 @@ function renderResult() {
     ${banner}
     <p class="kicker">A starting point, not a box.</p>
     <article class="hero-result tone-${esc(chosen)}">
-      <span class="sticker s-paper tilt-r">curious looks good on you</span>
+      <span class="sticker s-paper tilt-r">a starting point</span>
       <p class="emoji" aria-hidden="true">${cat.emoji}</p>
       <h1 id="top-name">${esc(cat.name)}</h1>
       <p class="desc">${esc(cat.line)}</p>
@@ -668,13 +666,13 @@ function renderConnect() {
     : `<p class="note">You said this is it. The channel is the next step.</p>`;
   return shell(`
     <p class="kicker">Connect</p>
-    <h1>Found a little more you?</h1>
-    <p class="lede">Now find your people. Your ${esc(cat.name)} channel is students across colleges who get the same itch.</p>
+    <h1>Found your lane?</h1>
+    <p class="lede">Connect is the next step. Your ${esc(cat.name)} channel is for students who picked the same path.</p>
     <aside class="poster">
-      <span class="corner-sticker">${cat.emoji} your tribe</span>
-      <p class="poster-kicker">good people. new perspectives.</p>
+      <span class="corner-sticker">${cat.emoji} your people</span>
+      <p class="poster-kicker">Connect</p>
       <p class="poster-title">Join the ${esc(cat.name)} room</p>
-      <p>Same campus energy. A different college on the other side of the chat.</p>
+      <p>Same interest. Other colleges. A chat, not a signup on this page.</p>
     </aside>
     ${kind}
     <div class="actions">
@@ -702,7 +700,7 @@ function render() {
   const next = app.querySelector("main") && app.querySelector("main").dataset.screen;
   if (previous && next && previous !== next) window.scrollTo(0, 0);
   const titles = {
-    landing: "BeyondCampus · Sapiens Campus",
+    landing: "BeyondCampus",
     question: `Question ${state.qIndex + 1} · BeyondCampus`,
     result: "Your starting point · BeyondCampus",
     quests: `${CATEGORIES[state.chosen] ? CATEGORIES[state.chosen].name : "Quests"} · BeyondCampus`,
