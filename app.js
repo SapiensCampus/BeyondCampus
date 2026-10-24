@@ -8,7 +8,7 @@ const INVITE_LINKS = {
 };
 
 const STORAGE_KEY = "beyondcampus.discover.v1";
-const FOOTER = "BeyondCampus ✦ Discover ✦ Connect ✦ Grow";
+const FOOTER = "BeyondCampus";
 const SCREENS = ["landing", "question", "result", "quests", "confirm", "connect"];
 
 const SECONDARY = {
@@ -161,135 +161,113 @@ const QUESTIONS = [
   },
 ];
 
+const TRY_WHY = {
+  tech: "The quiz only guessed. Do one small build. If making it run feels good, this is what you love.",
+  design: "The quiz only guessed. Do one small visual fix. If making it look right feels good, this is what you love.",
+  entrepreneurship: "The quiz only guessed. Do one small idea check. If testing it on a real person feels good, this is what you love.",
+  content: "The quiz only guessed. Do one small story. If telling it feels good, this is what you love.",
+  community: "The quiz only guessed. Do one small people task. If bringing them together feels good, this is what you love.",
+};
+
 const QUESTS = {
   tech: [
     {
       id: "tech-1",
       minutes: 20,
-      title: "Build a one-page HTML about yourself",
-      detail: "Name, college, and one thing you're curious about. Save it and open it in a browser.",
+      title: "Make a one-page page about you",
+      detail: "Name, college, one thing you like. Open it in a browser.",
     },
     {
       id: "tech-2",
-      minutes: 20,
-      title: "Code a tiny college helper",
-      detail: "Attendance left, CGPA, or a mess-bill split. Twenty lines is enough. Run it once.",
+      minutes: 15,
+      title: "Make a tiny calculator",
+      detail: "Attendance left, or split a bill. Run it once.",
     },
     {
       id: "tech-3",
       minutes: 15,
-      title: "Read one student repo properly",
-      detail: "Write three sentences: what it does, who it's for, and one thing you'd change.",
-    },
-    {
-      id: "tech-4",
-      minutes: 25,
-      title: "Sketch three screens for a class app",
-      detail: "Something your class actually needs. Boxes and labels on paper or in a notes app.",
+      title: "Draw three app screens",
+      detail: "An app your class needs. Boxes and words only.",
     },
   ],
   design: [
     {
       id: "design-1",
-      minutes: 30,
-      title: "Redesign your college ID card",
-      detail: "Use Figma or Canva. Keep the facts. Change the feeling.",
+      minutes: 20,
+      title: "Redo your college ID card",
+      detail: "Canva or Figma. Same facts. Nicer look.",
     },
     {
       id: "design-2",
-      minutes: 20,
-      title: "Redo one campus poster",
-      detail: "One headline, one action, half the clutter. A photo of the original is enough reference.",
+      minutes: 15,
+      title: "Fix one messy poster",
+      detail: "One headline. One thing to do. Less clutter.",
     },
     {
       id: "design-3",
       minutes: 15,
-      title: "Shoot three campus contrasts",
-      detail: "Photograph three spots. Note where the contrast works and where it fails.",
-    },
-    {
-      id: "design-4",
-      minutes: 25,
-      title: "Wireframe your college homepage",
-      detail: "On paper. Six boxes maximum. What should a first-year see first?",
+      title: "Sketch your college homepage",
+      detail: "Six boxes. What should a new student see first?",
     },
   ],
   entrepreneurship: [
     {
       id: "entrepreneurship-1",
-      minutes: 20,
-      title: "Write a campus problem statement",
-      detail: "Who is stuck, how often, and what they do today. One short paragraph.",
+      minutes: 15,
+      title: "Write who is stuck",
+      detail: "Four lines. Who, and what they do today.",
     },
     {
       id: "entrepreneurship-2",
-      minutes: 30,
-      title: "Ask one classmate about a ₹100 problem",
-      detail: "What would they pay ₹100 to make easier? Write down their exact words.",
+      minutes: 15,
+      title: "Ask one friend",
+      detail: "What would they pay ₹100 to make easier? Write their words.",
     },
     {
       id: "entrepreneurship-3",
-      minutes: 20,
-      title: "Name a micro-service",
-      detail: "A name, a one-line offer, and a price. Notes, prints, or project help all count.",
-    },
-    {
-      id: "entrepreneurship-4",
-      minutes: 15,
-      title: "Map five nearby colleges",
-      detail: "List five colleges near yours and one reason a student there has the same problem.",
+      minutes: 10,
+      title: "Name it and price it",
+      detail: "A name, what it does in one line, and a price.",
     },
   ],
   content: [
     {
       id: "content-1",
-      minutes: 25,
-      title: "Write a 150-word campus scene",
-      detail: "Your voice. One moment. No advice, no moral.",
+      minutes: 15,
+      title: "Write one campus moment",
+      detail: "Half a page. Just what happened.",
     },
     {
       id: "content-2",
-      minutes: 20,
-      title: "Record a 45-second explainer",
-      detail: "Explain one idea to a junior. Listen back once. Note what you'd cut.",
+      minutes: 10,
+      title: "Record 30 seconds",
+      detail: "Explain one idea out loud. Listen once.",
     },
     {
       id: "content-3",
-      minutes: 15,
-      title: "Draft three reel hooks",
-      detail: "One sentence each. Only your department would get them.",
-    },
-    {
-      id: "content-4",
-      minutes: 20,
-      title: "Rewrite a dull announcement",
-      detail: "Take a real college notice and make a first-year actually read it.",
+      minutes: 10,
+      title: "Write three opening lines",
+      detail: "For a short video. One sentence each.",
     },
   ],
   community: [
     {
       id: "community-1",
-      minutes: 20,
-      title: "List eight people who should meet",
-      detail: "Pairs in your college who don't talk. One line on why each pair.",
+      minutes: 10,
+      title: "List four people who should meet",
+      detail: "One reason for each pair.",
     },
     {
       id: "community-2",
-      minutes: 25,
-      title: "Write a 10-line run-of-show",
-      detail: "A 45-minute interest circle: welcome, one prompt, a few demos, a close.",
+      minutes: 10,
+      title: "Plan a 30-minute meetup",
+      detail: "Five lines: hello, one question, share, close.",
     },
     {
       id: "community-3",
-      minutes: 15,
-      title: "Draft the invite",
-      detail: "Who it's for, where, when, and why it's worth showing up. Ready to paste.",
-    },
-    {
-      id: "community-4",
-      minutes: 20,
-      title: "Ask what event is missing",
-      detail: "Message one person you respect. Ask what event they wish existed. Save their answer.",
+      minutes: 10,
+      title: "Write the invite",
+      detail: "Who it is for, where, and when.",
     },
   ],
 };
@@ -450,23 +428,11 @@ function tagsFor(id) {
   return tags;
 }
 
-function ticker() {
-  const line = "Discover   ·   Connect   ·   Grow   ·   ";
-  return `
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>${line}</span><span>${line}</span>
-      </div>
-    </div>
-  `;
-}
-
 function shell(body) {
   const restart = state.screen !== "landing"
     ? `<button type="button" class="texty" data-action="restart">Start again</button>`
     : "";
   return `
-    ${ticker()}
     <div class="sheet">
       <header class="top">
         <button type="button" class="brandbtn" data-action="home">
@@ -488,47 +454,30 @@ function renderLanding() {
     <p class="eyebrow"><span class="faces" aria-hidden="true"><i>:)</i><i>:D</i><i>;)</i></span> a platform in three steps</p>
     <h1>Start with <span class="mark tilt">what you love.</span></h1>
     <p class="lede">Find what makes you, you. Meet your people across colleges. Grow with expert guidance.</p>
-    <div class="stickers">
-      <span class="sticker s-green tilt-l">About 2 minutes</span>
-      <span class="sticker s-pink tilt-r">a little more you</span>
-      <span class="sticker s-blue">no email needed</span>
+    <div class="actions hero-cta">
+      <button type="button" class="btn primary" data-action="start">Start discovering</button>
+      ${resume}
     </div>
-    <aside class="poster">
-      <span class="corner-sticker">your pace</span>
-      <p class="poster-kicker">Discover · Connect · Grow</p>
-      <p class="poster-title">A place to become</p>
-      <p>BeyondCampus is a simple platform. Discover what you enjoy, connect with people on that path, and grow with expert guidance when you want to go further.</p>
-    </aside>
+    <p class="meta">2 minutes · no sign-up</p>
     <ol class="phases">
       <li class="phase phase-discover is-now">
-        <div class="phase-top">
-          <span class="num">01</span>
-          <span class="badge">active</span>
-        </div>
+        <span class="num">01</span>
         <h2>Discover</h2>
-        <p>Name what you enjoy. No grades.</p>
+        <span class="badge">active</span>
       </li>
       <li class="phase phase-connect">
-        <div class="phase-top">
-          <span class="num">02</span>
-          <span class="badge">next</span>
-        </div>
+        <span class="num">02</span>
         <h2>Connect</h2>
-        <p>Meet people on the same path.</p>
+        <span class="badge">next</span>
       </li>
       <li class="phase phase-grow">
-        <div class="phase-top">
-          <span class="num">03</span>
-          <span class="badge">next</span>
-        </div>
+        <span class="num">03</span>
         <h2>Grow</h2>
-        <p>Expert guidance, when you are ready.</p>
+        <span class="badge">next</span>
       </li>
     </ol>
-    <p class="note">About 2 minutes. No email needed.</p>
-    <div class="actions">
-      ${resume}
-      <button type="button" class="btn ${resume ? "" : "primary"}" data-action="start">Start discovering</button>
+    <div class="dock">
+      <button type="button" class="btn primary" data-action="start">Start discovering →</button>
     </div>
   `);
 }
@@ -601,7 +550,7 @@ function renderResult() {
     <p class="hint">No grades. Just you. Switch if another path feels closer.</p>
     <div class="stack">${picks}</div>
     <div class="actions">
-      <button type="button" class="btn primary" data-action="quests">See these quests</button>
+      <button type="button" class="btn primary" data-action="quests">Try one small task</button>
     </div>
   `);
 }
@@ -614,29 +563,32 @@ function renderQuests() {
     : "";
   const cards = list.map((quest) => {
     const saved = questState(state.chosen, quest.id);
+    const note = saved.done
+      ? `<textarea id="note-${esc(quest.id)}" data-reflect="${esc(quest.id)}" maxlength="280" rows="2" placeholder="Optional. Did this feel like you?">${esc(saved.note)}</textarea>`
+      : "";
     return `
       <li class="quest ${saved.done ? "is-done" : ""}">
-        <p class="time">About ${quest.minutes} min</p>
-        <h2>${esc(quest.title)}</h2>
+        <div class="quest-top">
+          <h2>${esc(quest.title)}</h2>
+          <span class="time">${quest.minutes} min</span>
+        </div>
         <p>${esc(quest.detail)}</p>
         <label class="check">
           <input type="checkbox" data-quest="${esc(quest.id)}" ${saved.done ? "checked" : ""}>
           <span>Mark done</span>
         </label>
-        <label class="reflect-label" for="note-${esc(quest.id)}">Reflection, if you want</label>
-        <textarea id="note-${esc(quest.id)}" data-reflect="${esc(quest.id)}" maxlength="280" rows="2" placeholder="Optional. One line on how it felt.">${esc(saved.note)}</textarea>
+        ${note}
       </li>
     `;
   }).join("");
   return shell(`
     ${banner}
-    <p class="kicker">Try it. See how it feels.</p>
-    <h1><span class="emoji" aria-hidden="true">${cat.emoji}</span> ${esc(cat.name)} quests</h1>
-    <p class="lede">${esc(cat.line)}</p>
-    <p class="note">Small experiments, not big commitments.</p>
+    <p class="kicker">${esc(cat.name)}</p>
+    <h1 class="task-title"><span class="emoji" aria-hidden="true">${cat.emoji}</span> Try one. See if you love it.</h1>
+    <p class="why-brief">${esc(TRY_WHY[state.chosen] || "")}</p>
     <ul class="quests">${cards}</ul>
     <div class="actions">
-      <button type="button" class="btn primary" data-action="confirm">Continue</button>
+      <button type="button" class="btn primary" data-action="confirm">How did it feel?</button>
     </div>
   `);
 }
@@ -648,8 +600,8 @@ function renderConfirm() {
   return shell(`
     <p class="kicker">Be honest. It's your call.</p>
     <h1>Did you enjoy this? Is this what you love?</h1>
-    <p class="lede">You just looked at ${esc(cat.name)}. ${done} of ${total} quests marked done.</p>
-    <p class="note">Yes keeps going. Not really tries the next closest path.</p>
+    <p class="lede">Doing it is the real check. ${done} of ${total} tasks marked done.</p>
+    <p class="note">Yes means this fits. Not really tries the next closest.</p>
     <div class="actions">
       <button type="button" class="btn primary" data-action="enjoy" data-enjoy="yes">Yes</button>
       <button type="button" class="btn" data-action="enjoy" data-enjoy="kindof">Kind of</button>
