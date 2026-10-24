@@ -1,7 +1,11 @@
 # BeyondCampus
 
-A Sapiens Campus platform for Tamil Nadu engineering students to discover their interests and skills, connect with peers, and learn with experts.
+Hackathon Discover site for Sapiens Campus, for Tamil Nadu engineering students. Static files only: `index.html`, `styles.css`, and `app.js`. No build.
 
-The site is a static `index.html`. Vercel’s built-in GitHub integration deploys it. Pushes to `main` deploy to production on Vercel, and pull requests and other branches get preview deployments automatically.
+Open `index.html`, or serve this folder. Students take a short quiz, try a few small quests, then open their interest-channel invite. Grow is a coming-next teaser. Nothing is uploaded.
 
-Import this repository in the Vercel dashboard and leave Git deployments enabled. No GitHub Actions secrets are required.
+Progress is stored in this browser under `localStorage` key `beyondcampus.discover.v1`. Start again clears it.
+
+Dummy tribe links live in `INVITE_LINKS` at the top of `app.js`. Replace them with the real invites when those channels exist.
+
+Vercel’s GitHub integration deploys this folder. Pushes to `main` go to production. No build command.
