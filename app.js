@@ -450,20 +450,34 @@ function tagsFor(id) {
   return tags;
 }
 
+function ticker() {
+  const line = "Curious looks good on you  ✦  A place to become  ✦  Explore  ✦  Evelve  ✦  Engineer  ✦  No grades. Just you  ✦  Find your people  ✦  ";
+  return `
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>${line}</span><span>${line}</span>
+      </div>
+    </div>
+  `;
+}
+
 function shell(body) {
   const restart = state.screen !== "landing"
     ? `<button type="button" class="texty" data-action="restart">Start again</button>`
     : "";
   return `
-    <header class="top">
-      <button type="button" class="brandbtn" data-action="home">
-        <span class="brand">BeyondCampus</span>
-        <span class="by">Sapiens Campus</span>
-      </button>
-      ${restart}
-    </header>
-    <main id="screen" data-screen="${esc(state.screen)}"${state.chosen ? ` data-category="${esc(state.chosen)}"` : ""}>${body}</main>
-    <footer class="footer">${esc(FOOTER)}</footer>
+    ${ticker()}
+    <div class="sheet">
+      <header class="top">
+        <button type="button" class="brandbtn" data-action="home">
+          <span class="brand">BeyondCampus</span>
+          <span class="by">Sapiens Campus</span>
+        </button>
+        ${restart}
+      </header>
+      <main id="screen" data-screen="${esc(state.screen)}"${state.chosen ? ` data-category="${esc(state.chosen)}"` : ""}>${body}</main>
+      <footer class="footer">${esc(FOOTER)}</footer>
+    </div>
   `;
 }
 
@@ -472,12 +486,23 @@ function renderLanding() {
     ? `<button type="button" class="btn primary" data-action="resume">Continue where you left off</button>`
     : "";
   return shell(`
-    <p class="kicker">A place to become</p>
-    <h1><span class="mark">Your campus.</span> Without the limits.</h1>
+    <p class="eyebrow"><span class="faces" aria-hidden="true"><i>:)</i><i>:D</i><i>;)</i></span> a different kind of campus</p>
+    <h1>Your campus. <span class="mark tilt">Without the limits.</span></h1>
     <p class="lede">Find what makes you, you. Meet your people across colleges. Build the things you wish existed.</p>
-    <p class="note">About 2 minutes. A little more you.</p>
+    <div class="stickers">
+      <span class="sticker s-green tilt-l">About 2 minutes</span>
+      <span class="sticker s-pink tilt-r">a little more you</span>
+      <span class="sticker s-blue">no email needed</span>
+    </div>
+    <aside class="poster">
+      <span class="corner-sticker">you, somewhere new</span>
+      <p class="poster-kicker">12.0° curious / 100% you</p>
+      <p class="poster-title">A place to become</p>
+      <p>By the students, for the students. One curious campus for engineering colleges across Tamil Nadu.</p>
+      <p class="poster-stats"><span>3000+ students</span><span>50+ colleges</span><span>20+ meetups</span></p>
+    </aside>
     <ol class="phases">
-      <li class="phase is-now">
+      <li class="phase phase-discover is-now">
         <div class="phase-top">
           <span class="num">01</span>
           <span class="badge">active</span>
@@ -485,24 +510,24 @@ function renderLanding() {
         <h2>Discover</h2>
         <p>Find your kind of curious.</p>
       </li>
-      <li class="phase">
+      <li class="phase phase-connect">
         <div class="phase-top">
           <span class="num">02</span>
           <span class="badge">next</span>
         </div>
         <h2>Connect</h2>
-        <p>Good people. Your interest channel.</p>
+        <p>Good people. New perspectives.</p>
       </li>
-      <li class="phase">
+      <li class="phase phase-grow">
         <div class="phase-top">
           <span class="num">03</span>
           <span class="badge">next</span>
         </div>
         <h2>Grow</h2>
-        <p>Learn with experts.</p>
+        <p>Small starts. Real things. Learn with experts.</p>
       </li>
     </ol>
-    <p class="note">Free to explore. No email needed. For engineering students across Tamil Nadu.</p>
+    <p class="note">Free to explore. Curious looks good on you.</p>
     <div class="actions">
       ${resume}
       <button type="button" class="btn ${resume ? "" : "primary"}" data-action="start">Start discovering</button>
@@ -532,10 +557,12 @@ function renderQuestion() {
     <div class="bar" role="progressbar" aria-valuemin="1" aria-valuemax="${total}" aria-valuenow="${current}" aria-label="Question ${current} of ${total}">
       <span class="bar-fill" style="width:${width}%"></span>
     </div>
-    <article class="qcard">
-      <p class="kicker">No right answers</p>
-      <h1>${esc(question.prompt)}</h1>
-    </article>
+    <div class="qstack">
+      <article class="qcard">
+        <p class="kicker">A gut feeling. A single tap.</p>
+        <h1>${esc(question.prompt)}</h1>
+      </article>
+    </div>
     <p class="hint">Pick what feels like you. Not what sounds impressive.</p>
     <div class="stack">${options}</div>
     <div class="actions">${back}</div>
@@ -565,7 +592,8 @@ function renderResult() {
   return shell(`
     ${banner}
     <p class="kicker">A starting point, not a box.</p>
-    <article class="hero-result">
+    <article class="hero-result tone-${esc(chosen)}">
+      <span class="sticker s-paper tilt-r">curious looks good on you</span>
       <p class="emoji" aria-hidden="true">${cat.emoji}</p>
       <h1 id="top-name">${esc(cat.name)}</h1>
       <p class="desc">${esc(cat.line)}</p>
@@ -604,8 +632,8 @@ function renderQuests() {
   }).join("");
   return shell(`
     ${banner}
-    <p class="kicker">${esc(cat.name)}</p>
-    <h1><span class="emoji" aria-hidden="true">${cat.emoji}</span> Quests</h1>
+    <p class="kicker">Try it. See how it feels.</p>
+    <h1><span class="emoji" aria-hidden="true">${cat.emoji}</span> ${esc(cat.name)} quests</h1>
     <p class="lede">${esc(cat.line)}</p>
     <p class="note">Small experiments, not big commitments.</p>
     <ul class="quests">${cards}</ul>
@@ -620,7 +648,7 @@ function renderConfirm() {
   const done = (QUESTS[state.chosen] || []).filter((quest) => questState(state.chosen, quest.id).done).length;
   const total = (QUESTS[state.chosen] || []).length;
   return shell(`
-    <p class="kicker">${esc(cat.name)}</p>
+    <p class="kicker">Be honest. It's your call.</p>
     <h1>Did you enjoy this? Is this what you love?</h1>
     <p class="lede">You just looked at ${esc(cat.name)}. ${done} of ${total} quests marked done.</p>
     <p class="note">Yes keeps going. Not really tries the next closest path.</p>
@@ -641,7 +669,13 @@ function renderConnect() {
   return shell(`
     <p class="kicker">Connect</p>
     <h1>Found a little more you?</h1>
-    <p class="lede">Now find your people. Your ${esc(cat.name)} channel is for students across colleges who are into the same thing.</p>
+    <p class="lede">Now find your people. Your ${esc(cat.name)} channel is students across colleges who get the same itch.</p>
+    <aside class="poster">
+      <span class="corner-sticker">${cat.emoji} your tribe</span>
+      <p class="poster-kicker">good people. new perspectives.</p>
+      <p class="poster-title">Join the ${esc(cat.name)} room</p>
+      <p>Same campus energy. A different college on the other side of the chat.</p>
+    </aside>
     ${kind}
     <div class="actions">
       <a class="btn primary join" id="join-tribe" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Join your ${esc(cat.name)} tribe</a>
