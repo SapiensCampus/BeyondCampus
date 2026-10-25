@@ -1,117 +1,94 @@
-# BeyondCampus walkthrough plan
+# BeyondCampus presenter mock
 
-Closed-group draft of the Sapiens Campus Ikigai journey. Static site only. No account, no database. Progress stays in this browser.
+A desktop-first mock for the Sapiens Campus core team. It is for a laptop or a projector in a team meeting. It is not a student-facing app.
 
-This draft shows the whole path from the roadmap source and the “journey at a glance” diagram. It is a clickable preview, not finished research.
+Static files only. No account, no database. The sample student stays in this browser.
 
-## What the visitor should feel
+## What the room should understand
 
-A student can start from who they are, name what pulls them, try it, and see whether they love it and are good at it. If it fits, they reach a Profile v1 card and a peer-group invite. Sapiens Campus then shows what that path can pay and what the world needs. Industry connect is marked coming next.
+Ikigai here is four questions. The student drives the first two. Sapiens Campus provides the last two. Industry connect comes after, and is still closed.
 
-A tester who does not want to answer everything can skip a step, simulate that step, or load one fictional student and jump to any stage.
+1. What you love. Character, then interests.
+2. What you are good at. Little tasks, then love vs good-at.
+3. What you will be paid for. Career paths the campus shows.
+4. What the world needs. Problems, a nameless sample story, and what is coming.
 
-## Screens
+Between 2 and 3 sits a checkpoint: Profile v1, then a peer group. A path that does not fit sends the student back to interests. Paid for and world needs both leave the peer group and meet at industry connect.
 
-| Screen id | Journey node | What it shows |
-| --- | --- | --- |
-| `landing` | Start | Promise, the journey at a glance, start, simulate full journey, jump list |
-| `character` | Character · Who you are | 10 scenario questions plus 2 work-style questions, then the top two of 6 types |
-| `interests` | Interests · What pulls you | 3 suggested tracks, a short taste, excitement, a “what do you already do for fun” note, shortlist of 2 or 3 |
-| `tasks` | Little tasks · Try it for real | Taste, Try, and Stretch for each shortlisted track, with love and good-at ratings |
-| `path` | Confirmed path | Love vs good-at 2×2. Yes continues. “Not a fit, try next” returns to interests |
-| `profile` | Checkpoint | Profile v1 card: character, path, tasks, strengths, work style |
-| `peers` | Peer group | Interest-channel invite. Links stay placeholders |
-| `paid` | Paid for | Sample career map for the confirmed track. No salary figures |
-| `world` | World needs | Sample challenges, a nameless sample story, future needs, problem of the month |
-| `industry` | Industry connect | Coming-next teaser: talks, office hours, live briefs, referrals |
-| `overview` | Step jumper | Same stages, each opens directly without wiping progress |
+## Layout
 
-The stepper on every screen after landing mirrors the diagram order:
+Desktop is a slide, not a phone page.
 
-Character → Interests → Little tasks → Confirmed path → Profile → Peer group → Paid for → World needs → Industry connect
+- One slim strip across the top: “Draft mock for core-team review. Questions, tasks and content are drafts.”
+- A journey map pinned under the header, on every slide. Stages match the diagram and sit in groups: What you love, What you are good at, Checkpoint, Paid for, World needs, Industry connect. The current stage is highlighted. Any stage can be clicked. The map says which part the student drives and which part Sapiens Campus provides.
+- The slide itself is a split. Left: a phone frame of what the student sees, already filled with the sample student. Right: narration.
+- Narration is four plain pieces: a one-line “What’s happening”, “Why it matters”, “Who drives it” (Student, Sapiens Campus, Peers, or Industry), and “Output”, meaning what this step hands to the next one.
+- A dock with Back, a progress count such as “4 of 11”, and Next. Left and right arrow keys do the same, unless the presenter is typing.
+- On a narrow screen the narration stacks under the phone. The map scrolls sideways. The dock stays reachable.
 
-Paid for and World needs are sequential in the preview so a phone can show both. Copy on both screens says they branch from the peer group and meet again at industry connect.
+Colour is the approved palette, used as a code for the four Ikigai steps: pink for love, yellow for good-at, blue for paid for, green for world needs. Purple marks the checkpoint. Borders and shadows stay, without covering the content.
 
-## Flow
+## Slides
 
-1. Landing. Start the journey, or Simulate full journey.
-2. Character quiz. One question per screen. Result names the top two types and solo/team plus structure/freedom. Those styles do not change the interest. They show up on tasks and the profile.
-3. Interests. Tracks come from the top two character types. The student reacts, notes what they already do for fun, and keeps 2 or 3.
-4. Little tasks. Each kept interest has Taste (about 15 minutes), Try (about 1 hour), and Stretch (a weekend). After each, the student marks love and good-at from 1 to 5.
-5. Confirmed path. Scores land in one of four quadrants: Your path, Grow this skill, Useful skill not passion, Drop it. The strongest “your path” interest is the confirmed path. If none land there, “Not a fit, try next” goes back to interests.
-6. Profile v1, then the peer-group invite for that interest.
-7. Step 3 and Step 4 content for that interest, labelled sample.
-8. Industry connect, coming next.
+Eleven slides. The first and last are for the room. The nine in the middle are the journey.
 
-Restart clears this browser’s saved journey.
+| # | Id | Map group | Who drives it | Phone shows | Hands off |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `intro` | — | Student, then Sapiens Campus | The four questions | The shared map. Names Meera once. |
+| 2 | `character` | What you love | Student | Two types and work style | Types that choose the interests |
+| 3 | `interests` | What you love | Student | Three tastes, shortlist kept | Two or three interests |
+| 4 | `tasks` | What you are good at | Student | Taste, Try, Stretch with scores | Love and skill scores |
+| 5 | `path` | What you are good at | Student | Four plain places | One confirmed path, or back to interests |
+| 6 | `profile` | Checkpoint | Student | Profile v1 card | The card the peer group is built on |
+| 7 | `peers` | Checkpoint | Peers | Placeholder invite | A joined group for that path |
+| 8 | `paid` | Paid for | Sapiens Campus | Sample roles and ladder | A career picture, no pay figures |
+| 9 | `world` | World needs | Sapiens Campus | Sample problems and a nameless story | Problems worth solving |
+| 10 | `industry` | Industry connect | Industry | Coming next | Talks, hours, briefs, referrals |
+| 11 | `summary` | — | All four | Meera’s path in one card | The handoffs, said once |
 
-## Data and files
+## Sample student
+
+Meera is a fictional second-year student. She is not a real person. The intro says so once. A small label beside the phone says so on every slide. She is not repeated as a banner inside the phone.
+
+Her answers make her a Thinker who also builds. She keeps Data and research, Tech, and Design. Tech is the path (loved it, and it went well). Data and research is a skill to grow. Design is useful, not a passion. The peer group, the career picture, and the world-needs picture are all for Tech.
+
+The mock is simulated by default. Meera is already filled in. No skip button, no simulate button, no “sample fill” notice.
+
+“Try it yourself” is one switch in the header. It makes the phone interactive: answer the scenes, keep interests, rate tasks. The narration does not change. Turning the switch off returns the phone to Meera. Answers typed in try-mode stay in this browser until the switch is turned off and the page is reloaded, and they never replace Meera’s sample.
+
+## Draft and research labels
+
+- The top strip is the only draft banner.
+- A small Draft tag appears only on a question or a task inside the phone.
+- Career and world copy still say “Sample, to be researched”.
+- The people-story says it is not a real person. No name is invented.
+- No salary figures.
+- WhatsApp links stay the placeholders in `INVITE_LINKS` and open in a new tab.
+
+## Files
 
 | File | Role |
 | --- | --- |
-| `index.html` | Shell. Loads `content.js` then `app.js` |
-| `content.js` | Tracks, character types, quiz, tasks, sample career and world copy, fictional persona, invite placeholders |
-| `app.js` | State, scoring, screens, skip, simulate, stepper |
-| `styles.css` | Existing multi-colour palette plus draft banner, stepper, matrix, cards |
+| `index.html` | Shell. Loads `content.js`, then `app.js`. |
+| `content.js` | Tracks, quiz, tasks, sample career and world copy, Meera, invite placeholders, slide narration |
+| `app.js` | Slide index, map, phone, narration, try-mode, keys |
+| `styles.css` | Presenter layout, phone frame, map, dock |
 | `docs/WALKTHROUGH_PLAN.md` | This plan |
 
-Invite placeholders live in `INVITE_LINKS` at the top of `content.js`, with a TODO to replace them. They are dummy `https://chat.whatsapp.com/beyondcampus-…` links and open in a new tab.
+Storage key: `beyondcampus.presenter.v1`. Older keys are left untouched.
 
-Interest tracks: Tech, Data & research, Design, Content & media, Community, Entrepreneurship, Organising. Character types map onto them:
+## Acceptance
 
-| Type | Leans towards |
-| --- | --- |
-| Builder | Tech, Data & research, Organising |
-| Thinker | Data & research, Tech, Design |
-| Creator | Design, Content & media, Community |
-| Helper | Community, Content & media, Organising |
-| Leader | Entrepreneurship, Community, Tech |
-| Organiser | Organising, Entrepreneurship, Data & research |
-
-The top two types contribute their tracks. The screen shows the first three unique suggestions.
-
-Storage key: `beyondcampus.journey.v1`. The older Discover key is left untouched.
-
-## Skip and simulate
-
-On every step screen:
-
-- **Skip to next step.** Moves forward. If that step has no answers yet, it keeps a clearly marked sample so the next screen can render.
-- **Simulate.** Fills that step with the fictional student’s answers or ratings and shows the result of that step.
-- **Stepper and Journey map.** Jump to any stage. Progress already saved stays saved.
-- **Simulate full journey.** Loads Meera, a fictional second-year student, through every stage, and opens the confirmed-path screen. Later stages are filled and can be opened from the stepper.
-- **Restart.** Clears `beyondcampus.journey.v1` and returns to the landing screen.
-
-Meera is labelled fictional everywhere she appears. She is not a real person.
-
-## Draft labelling
-
-- A persistent banner on every screen: “Draft preview, for closed-group testing. Questions, tasks and content are drafts.”
-- A small Draft tag on each question, task, career block, and world-needs block.
-- Career and world copy says “Sample, to be researched”. No salary numbers. No named real people. People-stories say they are not a real person.
-
-## Wording and visual
-
-Keep the current cream, paper, yellow, green, pink, lilac, and sky palette, thick ink borders, and offset shadows. Use the name Sapiens Campus. Do not use CodeSapiens.
-
-Landing and section lines borrow the campus voice: a place to become, find what makes you you, no grades, curious looks good on you, by the students for the students.
-
-## Acceptance checklist
-
-- Banner is visible on landing, character, interests, tasks, path, profile, peers, paid, world, industry, and the journey map.
-- Draft tags show on a question, a task, a career block, and a world-needs block.
-- Character quiz can be answered to a result, or simulated.
-- Interests can be shortlisted, or simulated.
-- Taste, Try, and Stretch accept love and good-at scores.
-- The 2×2 places a loved and strong interest in “Your path”.
-- “Not a fit, try next” returns to interests.
-- Profile v1 shows character, path, and task signal.
-- Peer invite uses the placeholder for that track and opens in a new tab.
-- Paid and world screens show sample labels and no salary figures or real people.
-- Industry connect says coming next.
-- Skip works on each step.
-- Simulate full journey fills Meera and opens the path.
-- Stepper opens each stage.
-- Restart clears the journey.
-- No console errors during those walks.
-- Mobile width 390px does not trap the main actions off screen.
+- The top strip is the only draft banner, and it is on every slide.
+- Intro, a middle step, and the summary can be read without scrolling past banners to find the point.
+- The map is visible on every slide, grouped under the Ikigai steps, with the current stage highlighted.
+- Clicking a stage opens it. Back, Next, and the arrow keys move one slide.
+- Progress reads “n of 11”.
+- Meera is named as fictional in the intro and in the small phone label, and not in a box on every phone screen.
+- Try it yourself lets a scene be answered, and turning it off shows Meera again.
+- The path phone uses plain places, not axis jargon.
+- Paid and world screens say sample, and contain no pay figures and no real person.
+- The peer invite is the Tech placeholder and opens in a new tab.
+- At 1440×900 the phone and the narration sit side by side.
+- At a mobile width the narration sits under the phone, and Back / Next remain usable.
+- No console errors during that walk.
