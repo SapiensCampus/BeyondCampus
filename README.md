@@ -1,11 +1,11 @@
 # BeyondCampus
 
-Hackathon site for BeyondCampus, a student platform to discover what you enjoy, connect with peers, and grow with expert guidance. Static files only: `index.html`, `styles.css`, and `app.js`. No build.
+A static walkthrough of the Sapiens Campus Ikigai journey, for a closed test group. Students move from character, to interests, to little tasks, then a Profile v1 and a peer-group invite. Sapiens Campus shows sample career paths and what the world needs. Industry connect is marked coming next.
 
-Open `index.html`, or serve this folder. Students take a short quiz, try a few small quests, then open their interest-channel invite. Grow is a coming-next teaser. Nothing is uploaded.
+Files: `index.html`, `content.js`, `app.js`, and `styles.css`. No build, no account, no database. The plan for this draft is `docs/WALKTHROUGH_PLAN.md`.
 
-Progress is stored in this browser under `localStorage` key `beyondcampus.discover.v1`. Start again clears it.
+Open `index.html`, or serve this folder. Progress stays in this browser under `localStorage` key `beyondcampus.journey.v1`. Restart clears that key only.
 
-Dummy tribe links live in `INVITE_LINKS` at the top of `app.js`. Replace them with the real invites when those channels exist.
+WhatsApp invites are still placeholders. They live in `INVITE_LINKS` at the top of `content.js`. Replace them when the real links exist. Career paths, world needs, and people-stories are labelled sample and are not researched yet. The one-click demo uses Meera, a fictional student.
 
 Vercel’s GitHub integration deploys this folder. Pushes to `main` go to production. No build command.
