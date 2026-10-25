@@ -404,7 +404,7 @@ var JOURNEY = {
     answers: [1, 1, 0, 1, 1, 0, 1, 1, 1, 0],
     social: "team",
     structure: "freedom",
-    funNote: "She takes apart old earphones and watches explainers until the evening disappears.",
+    funNote: "Takes apart old earphones and watches explainers until the evening disappears.",
     ratings: {
       data: {
         taste: { love: 5, good: 2 },
@@ -423,4 +423,130 @@ var JOURNEY = {
       }
     }
   }
+};
+
+/* Narration for the core-team presenter. The phone shows Meera unless someone turns on Try it yourself. */
+var PRESENTER = {
+  groups: [
+    { id: "love", tone: "love", kicker: "1 · What you love", who: "Student", slides: ["character", "interests"] },
+    { id: "good", tone: "good", kicker: "2 · What you are good at", who: "Student", slides: ["tasks", "path"] },
+    { id: "check", tone: "check", kicker: "Checkpoint", who: "Student · Peers", slides: ["profile", "peers"] },
+    { id: "paid", tone: "paid", kicker: "3 · Paid for", who: "Sapiens Campus", slides: ["paid"] },
+    { id: "world", tone: "world", kicker: "4 · World needs", who: "Sapiens Campus", slides: ["world"] },
+    { id: "industry", tone: "industry", kicker: "Then", who: "Industry", slides: ["industry"] }
+  ],
+  labels: {
+    intro: "Intro",
+    character: "Character",
+    interests: "Interests",
+    tasks: "Little tasks",
+    path: "Love vs good-at",
+    profile: "Profile v1",
+    peers: "Peer group",
+    paid: "Paid for",
+    world: "World needs",
+    industry: "Industry",
+    summary: "Summary"
+  },
+  slides: [
+    {
+      id: "intro",
+      kicker: "For the core team",
+      title: "The Ikigai journey",
+      happening: "A student tests what they love and what they are good at. Sapiens Campus then shows where that path can lead.",
+      why: "So this team can see the whole flow in one sitting, before anything is built for real.",
+      who: ["Student", "Sapiens Campus"],
+      output: "A shared map. The phone shows Meera, a fictional sample student. She is not a real person."
+    },
+    {
+      id: "character",
+      kicker: "Step 1 · What you love",
+      title: "Character",
+      happening: "She answers ten short scenes, then says if she works alone or with people, and if she wants a plan or freedom.",
+      why: "The scenes suggest a character type. That type chooses which interests to offer next. It is not a grade.",
+      who: ["Student"],
+      output: "Two types, and a work style. Meera comes out a Thinker who also builds. Those types suggest the next interests."
+    },
+    {
+      id: "interests",
+      kicker: "Step 1 · What you love",
+      title: "Interests",
+      happening: "She sees three interests from her top types, reads a thirty-second taste, and keeps two or three.",
+      why: "Love is a pull, noticed quickly. She does not have to pick a career yet.",
+      who: ["Student"],
+      output: "A shortlist. Meera keeps Data and research, Tech, and Design. Each one gets little tasks next."
+    },
+    {
+      id: "tasks",
+      kicker: "Step 2 · What you are good at",
+      title: "Little tasks",
+      happening: "Every kept interest gets a fifteen-minute taste, a one-hour try, and a weekend stretch. She marks how much she loved it, and how well it went.",
+      why: "Doing a small piece of the work checks the guess. Enjoying it and being good at it are two different questions.",
+      who: ["Student"],
+      output: "A love mark and a skill mark on every task. Those marks place each interest on the next slide."
+    },
+    {
+      id: "path",
+      kicker: "Step 2 · What you are good at",
+      title: "Love vs good-at",
+      happening: "Each interest lands in one of four places: a path, a skill to grow, a useful skill that is not a passion, or a drop.",
+      why: "Only the place she loved, and where the work went well, is confirmed. If nothing lands there, she returns to interests and tries the next set.",
+      who: ["Student"],
+      output: "One confirmed path. Meera’s is Tech. Data and research stays a skill to grow. Design is useful, not a passion."
+    },
+    {
+      id: "profile",
+      kicker: "Checkpoint",
+      title: "Profile v1",
+      happening: "She receives a short card: character, confirmed path, tasks she rated, and where she is already strong.",
+      why: "This is the first thing that is hers. The peer group and the campus steps hang off this card.",
+      who: ["Student"],
+      output: "A confirmed profile for Tech. Next she meets students on that same path."
+    },
+    {
+      id: "peers",
+      kicker: "Connect",
+      title: "Peer group",
+      happening: "She is invited to the channel for her path. Students there share a weekly challenge, show their work, and meet once a month.",
+      why: "A path is easier to trust when other students are walking it.",
+      who: ["Peers"],
+      output: "A joined group. Sapiens Campus uses this same path to show careers and world needs. The invite link is still a placeholder."
+    },
+    {
+      id: "paid",
+      kicker: "Step 3 · What you will be paid for",
+      title: "Paid for",
+      happening: "Sapiens Campus lays out roles, how people arrive there, a skill ladder, and early ways to practise, for her path.",
+      why: "She found the path. The campus shows what the work can look like.",
+      who: ["Sapiens Campus"],
+      output: "A career picture for Tech. Pay figures are not in this draft. It sits beside world needs, and both meet at industry connect."
+    },
+    {
+      id: "world",
+      kicker: "Step 4 · What the world needs",
+      title: "World needs",
+      happening: "Sapiens Campus shows problems on this path, what is growing, what is fading, and a problem of the month.",
+      why: "She should see the work that matters, not only job titles.",
+      who: ["Sapiens Campus"],
+      output: "Problems worth solving in Tech. The copy is a sample, to be researched, and it names no real person. Next is industry connect."
+    },
+    {
+      id: "industry",
+      kicker: "Coming next",
+      title: "Industry connect",
+      happening: "Expert talks, mentor hours, live briefs, and introductions. This screen says coming next.",
+      why: "The journey should end with people who already do the work, once those partners exist.",
+      who: ["Industry"],
+      output: "A door from the peer group to mentors and real briefs. It is not open in this mock."
+    },
+    {
+      id: "summary",
+      kicker: "End of the walk",
+      title: "Meera, end to end",
+      happening: "One fictional student has passed every handoff, from character to a path the campus can speak about.",
+      why: "The team can point at who does what: the student, her peers, Sapiens Campus, then industry.",
+      who: ["Student", "Peers", "Sapiens Campus", "Industry"],
+      output: "Thinker and Builder. Three interests. Confirmed Tech. A Tech peer group. Sample careers and sample problems. Industry still ahead."
+    }
+  ]
 };
